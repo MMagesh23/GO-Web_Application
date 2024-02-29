@@ -1,0 +1,89 @@
+.login-container {
+  max-width: 35%;
+  margin: 200px auto;
+  padding: 20px;
+  justify-content: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 25px 0 black;
+}
+
+.login-topic {
+  color: #0d3c9b;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color: #0d3c9b;
+}
+
+.required {
+  color: red;
+  margin-left: 1px;
+}
+
+.login-form input,
+.login-form select {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-form .phone-number {
+  display: flex;
+}
+
+.login-form #country-code {
+  width: 100px;
+  margin-right: 5px;
+  padding: 8px;
+  color: #0d3c9b;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #0d3c9b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: blue;
+}
+
+.eye-login {
+  margin-bottom: 50%;
+  height: 15px;
+  width: auto;
+}
+
+.custom-input-login {
+  outline: 1px solid #0d3c9b;
+}
+
+.password-input-login {
+  position: relative;
+}
+
+.password-toggle-login {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}

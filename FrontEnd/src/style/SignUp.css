@@ -1,0 +1,123 @@
+.signup-container-signup {
+  max-width: 35%;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 25px 0 black;
+}
+
+.signup-topic {
+  color: #0d3c9b;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.signup-form-signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form-signup label {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: #0d3c9b;
+}
+
+.signup-required {
+  color: red;
+  margin-left: 1px;
+}
+
+.signup-form-signup input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Separate class for radio buttons */
+.signup-radio-container {
+  display: inline-flex; /* Display radio buttons in the same line */
+  align-items: center;
+  color: #0d3c9b;
+}
+
+.signup-radio-container input[type="radio"] {
+  margin-right: 0px;
+}
+
+.signup-form-signup input,
+.signup-form-signup input[type="text"],
+.signup-form-signup input[type="date"],
+.signup-form-signup select,
+.signup-form-signup textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-phone-number {
+  display: flex;
+}
+
+.signup-form-signup #country-code {
+  width: 100px;
+  margin-right: 5px;
+  padding: 8px;
+  color: #0d3c9b;
+}
+
+.password-input-signup {
+  position: relative;
+}
+
+.password-toggle-signup {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.eye-signup {
+  margin-top: 50%;
+  height: 15px;
+  width: auto;
+}
+
+.signup-form-signup button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #0d3c9b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form-signup button:hover {
+  background-color: blue;
+}
+
+.signup-error-message {
+  color: red;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.signup-form-signup textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.custom-input-signup {
+  outline: 1px solid #0d3c9b;
+}

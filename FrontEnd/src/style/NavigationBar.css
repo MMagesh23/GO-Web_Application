@@ -1,0 +1,71 @@
+.navbar {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 25px 0 black;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.heading-nav {
+  margin: 0;
+  color: #0d3c9b;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.nav-item a:hover {
+  color: #0d3c9b;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-link.active {
+  color: red; /* Change color to red for active link */
+  /* Add any other styling for the active link */
+}
+
+.logout-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.logout-icon:hover {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}

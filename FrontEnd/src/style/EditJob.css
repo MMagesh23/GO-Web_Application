@@ -1,0 +1,60 @@
+.edit-job-container {
+  max-width: 35%;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 0 25px 0 black;
+}
+
+.edit-job-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0056b3;
+}
+
+.edit-job-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-job-container input,
+.edit-job-container textarea,
+.edit-job-container select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: 1px solid #0d3c9b;
+}
+
+.edit-job-container textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.edit-job-container button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.edit-job-container button:hover {
+  background-color: blue;
+}
+
+.edit-job-container .toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
