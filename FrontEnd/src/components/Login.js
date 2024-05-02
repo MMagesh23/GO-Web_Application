@@ -4,9 +4,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import AuthService from "./authService";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import "../style/Login.css";
 
 const Login = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     countryCode: "+91",
     phone: "",
@@ -48,10 +51,11 @@ const Login = () => {
   return (
     <div className="login-container">
       <ToastContainer />
-      <h2 className="login-topic">LOGIN</h2>
+      <h2 className="login-topic">{t("LOGIN")}</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="phone">
-          Phone Number<span className="required">*</span>
+          {t("Phone_Number")}
+          <span className="required">*</span>
         </label>
         <div className="phone-number">
           <select
@@ -72,11 +76,14 @@ const Login = () => {
             value={formData.phone}
             onChange={handleChange}
             required
+            label="Phone Number"
+            defaultValue="Phone Number"
           />
         </div>
 
         <label htmlFor="password">
-          Password<span className="required">*</span>
+          {t("Password")}
+          <span className="required">*</span>
         </label>
         <div className="password-input-login ">
           <input
@@ -104,7 +111,7 @@ const Login = () => {
             </span>
           )}
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">{t("Login")}</button>
       </form>
     </div>
   );

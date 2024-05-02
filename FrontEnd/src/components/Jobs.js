@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../style/Jobs.css";
 import AuthService from "./authService";
+import { useTranslation } from "react-i18next";
 
 const Jobs = () => {
+  const { t } = useTranslation();
+
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [jobs] = useState([
     {
       id: 1,
@@ -128,17 +132,14 @@ const Jobs = () => {
     },
   ]);
   useEffect(() => {
-    // Check if user is authenticated when component mounts
     checkAuthentication();
   }, []);
 
   const checkAuthentication = () => {
-    // Call AuthService method to check if user is authenticated
+    setIsLoggedIn(AuthService.isAuthenticated());
     if (AuthService.isAuthenticated()) {
-      // Do something if authenticated
       console.log("User is authenticated");
     } else {
-      // Do something if not authenticated
       console.log("User is not authenticated");
     }
   };
@@ -151,33 +152,41 @@ const Jobs = () => {
     job.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
   return (
-    <div className="jobs-container">
-      <h1 className="jobs-heading">Jobs</h1>
-      <div className="jobs-search-container">
-        <input
-          type="text"
-          className="jobs-search-input"
-          placeholder="Search by category..."
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-      </div>
-      <div className="jobs-job-container">
-        {filteredJobs.map((job) => (
-          <Link
-            to={`/jobs/${job.category}`}
-            key={job.category}
-            className="jobs-job-link"
-          >
-            <div className="jobs-job-item">
-              <img src={job.image} alt={job.title} className="jobs-job-image" />
-              <div className="jobs-job-details">
-                <h2>{job.title}</h2>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div>
+      {isLoggedIn && (
+        <div className="jobs-container">
+          <h1 className="jobs-heading">{t("Jobs")}</h1>
+          <div className="jobs-search-container">
+            <input
+              type="text"
+              className="jobs-search-input"
+              placeholder="Search by category..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </div>
+          <div className="jobs-job-container">
+            {filteredJobs.map((job) => (
+              <Link
+                to={`/jobs/${job.category}`}
+                key={job.category}
+                className="jobs-job-link"
+              >
+                <div className="jobs-job-item">
+                  <img
+                    src={job.image}
+                    alt={job.title}
+                    className="jobs-job-image"
+                  />
+                  <div className="jobs-job-details">
+                    <h2>{job.title}</h2>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

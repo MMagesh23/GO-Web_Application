@@ -4,6 +4,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const jobRoutes = require("./routes/jobRoutes");
 const profileRoutes = require("./routes/profileRoutes");
+const chatRoutes = require("./routes/chatRoutes");
 
 require("dotenv").config();
 
@@ -23,6 +24,9 @@ app.use("/", jobRoutes);
 
 //Profile routes
 app.use("/profile", profileRoutes);
+
+//Chat routes
+app.use("/", chatRoutes);
 
 mongoose
   .connect(MONGODB_URI)

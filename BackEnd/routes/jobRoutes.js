@@ -48,4 +48,6 @@ router.put("/edit-job/:jobId", jobController.editJobDetails);
 //Route for delete job
 router.delete("/delete-job/:jobId", jobController.deleteJob);
 
+router.get("/jobschart", jobController.jobsChart);
+
 module.exports = router;

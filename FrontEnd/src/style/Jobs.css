@@ -13,6 +13,12 @@
   background-color: white;
 }
 
+@media (min-width: 1200px) {
+  .jobs-container {
+    margin-left: 270px;
+  }
+}
+
 .jobs-heading {
   font-size: 24px;
   color: #0d3c9b;

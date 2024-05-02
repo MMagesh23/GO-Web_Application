@@ -269,6 +269,28 @@ const deleteJob = async (req, res) => {
   }
 };
 
+const jobsChart = async (req, res) => {
+  try {
+    const activeJobs = await Job.find({ status: "active" });
+
+    const categoryCounts = {};
+
+    activeJobs.forEach((job) => {
+      const category = job.category;
+      if (categoryCounts[category]) {
+        categoryCounts[category]++;
+      } else {
+        categoryCounts[category] = 1;
+      }
+    });
+
+    return res.status(200).json({ chartData: categoryCounts });
+  } catch (error) {
+    console.error("Error charting job:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   createJob,
   getAllJobs,
@@ -277,4 +299,5 @@ module.exports = {
   getEditJobDetails,
   editJobDetails,
   deleteJob,
+  jobsChart,
 };

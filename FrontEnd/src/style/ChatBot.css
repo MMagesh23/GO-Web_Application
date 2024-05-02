@@ -1,0 +1,30 @@
+.chatbot-container {
+  max-width: 50%;
+  height: auto;
+  margin: 200px auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  box-shadow: 0 0 25px 0 black;
+  background-color: white;
+}
+
+@media (max-width: 900px) {
+  .chatbot-container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .chatbot-container {
+    max-width: 80%;
+  }
+}
+
+.chat-head {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0056b3;
+}

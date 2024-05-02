@@ -27,6 +27,7 @@
 .heading-nav {
   margin: 0;
   color: #0d3c9b;
+  align-items: center;
 }
 
 .nav-list {
@@ -39,6 +40,7 @@
 
 .nav-item {
   margin-right: 15px;
+  width: auto;
 }
 
 .nav-item a {
@@ -48,15 +50,8 @@
   margin-right: 10px;
 }
 
-.nav-item a:hover {
-  color: #0d3c9b;
-  font-size: 18px;
-  transition: 0.5s;
-}
-
 .nav-link.active {
-  color: red; /* Change color to red for active link */
-  /* Add any other styling for the active link */
+  color: red;
 }
 
 .logout-icon {
@@ -68,4 +63,16 @@
   width: 40px;
   height: 40px;
   transition: 0.5s;
+}
+
+.Short-icons {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.Short-Nav {
+  width: 40px;
+  height: auto;
+  margin-right: 5px;
 }

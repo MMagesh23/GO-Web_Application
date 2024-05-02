@@ -13,8 +13,20 @@
   background-color: white;
 }
 
+@media (max-width: 900px) {
+  .container-profile {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-profile {
+    max-width: 80%;
+  }
+}
+
 .profile-card {
-  width: 90%;
+  width: 80%;
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 10px;

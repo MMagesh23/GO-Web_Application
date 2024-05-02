@@ -11,7 +11,10 @@ import Profile from "./components/Profile";
 import EditProfile from "./components/EditProfile";
 import ManageJobs from "./components/ManageJobs";
 import EditJob from "./components/EditJob";
-// import ProtectedRoute from "./components/ProtectedRoute";
+import JobsChart from "./components/JobsChart";
+import Maps from "./components/Maps";
+import ChatBot from "./components/ChatBot";
+import Chat from "./components/Chat";
 
 const App = () => {
   return (
@@ -28,6 +31,11 @@ const App = () => {
         <Route path="/profile/edit" element={<EditProfile />} />
         <Route path="/job/manage-jobs" element={<ManageJobs />} />
         <Route path="/edit-job/:jobId" element={<EditJob />} />
+        <Route path="/jobschart" element={<JobsChart />} />
+        <Route path="/maps" element={<Maps />} />
+        <Route path="/chatbot" element={<ChatBot />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/chat/:userId" element={<Chat />} />
       </Routes>
     </Router>
   );
